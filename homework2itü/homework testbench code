@@ -1,0 +1,125 @@
+entity homework_tb is
+--  Port ( );
+end homework_tb;
+
+architecture Behavioral of homework_tb is
+signal a_1 : std_logic :='0' ;
+signal a_0 : std_logic :='0' ;
+signal b_1 : std_logic :='0' ;
+signal b_0 : std_logic :='0' ;
+signal c_0 : std_logic ;
+signal c_1 : std_logic ;
+signal c_2 : std_logic ;
+begin
+ uut : entity work.homework
+     port map(
+     a1 => a_1,
+     a0 => a_0,
+     b1 => b_1,
+     b0 => b_0,
+     c0 => c_0,
+     c1 => c_1,
+     c2 => c_2
+     );
+     process is
+     begin
+     a_1 <='0';
+     a_0 <='0';
+     b_1 <='0';
+     b_0 <='0';
+     wait for 10 ns ;
+     
+     a_1 <='0';
+     a_0 <='0';
+     b_1 <='0';
+     b_0 <='1';
+     wait for 10 ns ;
+     
+     a_1 <='0';
+     a_0 <='0';
+     b_1 <='1';
+     b_0 <='0';
+     wait for 10 ns ;
+     
+     a_1 <='0';
+     a_0 <='0';
+     b_1 <='1';
+     b_0 <='1';
+     wait for 10 ns ;
+     
+     a_1 <='0';
+     a_0 <='1';
+     b_1 <='0';
+     b_0 <='0';
+     wait for 10 ns ;
+     
+     a_1 <='0';
+     a_0 <='1';
+     b_1 <='0';
+     b_0 <='1';
+     wait for 10 ns ;
+     
+     a_1 <='0';
+     a_0 <='1';
+     b_1 <='1';
+     b_0 <='0';
+     wait for 10 ns ;
+     
+     a_1 <='0';
+     a_0 <='1';
+     b_1 <='1';
+     b_0 <='1';
+     wait for 10 ns ;
+     
+     a_1 <='1';
+     a_0 <='0';
+     b_1 <='0';
+     b_0 <='0';
+     wait for 10 ns ;
+     
+     a_1 <='1';
+     a_0 <='0';
+     b_1 <='0';
+     b_0 <='1';
+     wait for 10 ns ;
+     
+     a_1 <='1';
+     a_0 <='0';
+     b_1 <='1';
+     b_0 <='0';
+     wait for 10 ns ;
+     
+     a_1 <='1';
+     a_0 <='0';
+     b_1 <='1';
+     b_0 <='1';
+     wait for 10 ns ;
+     
+     a_1 <='1';
+     a_0 <='1';
+     b_1 <='0';
+     b_0 <='0';
+     wait for 10 ns ;
+     
+     a_1 <='1';
+     a_0 <='1';
+     b_1 <='0';
+     b_0 <='1';
+     wait for 10 ns ;
+     
+     a_1 <='1';
+     a_0 <='1';
+     b_1 <='1';
+     b_0 <='0';
+     wait for 10 ns ;
+     
+     a_1 <='1';
+     a_0 <='1';
+     b_1 <='1';
+     b_0 <='1';
+     wait for 10 ns ;
+ 
+    end process;
+ 
+   
+end Behavioral;
