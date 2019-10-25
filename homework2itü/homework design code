@@ -1,0 +1,17 @@
+entity homework is
+  Port (a1:in std_logic;
+        a0:in std_logic;
+        b1:in std_logic;
+        b0:in std_logic;
+        c0 : out std_logic;
+        c1 : out std_logic;
+        c2 : out std_logic );
+end homework;
+
+architecture Behavioral of homework is
+
+begin
+c0 <= (a0 and (not b1) and (not b0)) or (a1 and (not a0) and b0)  or (a0 and b1 and (not b0)) or ((not a1) and (not a0) and b0);
+c1 <= (a1 and (not b1) and (not b0)) or (a1 and (not a0) and (not b1)) or ((not a1) and a0 and (not b1) and b0) or (a1 and a0 and b1 and b0) or ((not a1) and (not a0) and b1) or ((not a1) and b1 and (not b0)); 
+c2 <= (a1 and b1) or (a1 and a0 and b0) or (a0 and b1 and b0);
+end Behavioral;
