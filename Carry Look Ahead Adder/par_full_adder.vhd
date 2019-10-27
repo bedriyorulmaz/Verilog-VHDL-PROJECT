@@ -48,4 +48,4 @@ Pi<= A xor B ;
 Gi<= A AND B;
 Si<= A xor B xor cin; 
 
-end Behavioral;
+end Behavioral; 
