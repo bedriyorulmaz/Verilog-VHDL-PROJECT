@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../../../../7.dönemdersler/EMBEDDED SYSTEM/ödev1/vhdl/BRAM0.vhd" \
+"../../../../../../../../../7.dönemdersler/EMBEDDED SYSTEM/ödev1/vhdl/kcpsm6.vhd" \
+"../../../../../../../../../7.dönemdersler/EMBEDDED SYSTEM/ödev1/vhdl/top.vhd" \
+"../../../../../../../../../7.dönemdersler/EMBEDDED SYSTEM/ödev1/vhdl/sim_top.vhd" \
+
+# Do not sort compile order
+nosort

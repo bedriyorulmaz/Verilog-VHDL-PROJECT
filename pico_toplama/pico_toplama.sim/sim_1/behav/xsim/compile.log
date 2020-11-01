@@ -1,0 +1,8 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/bedri/Desktop/7.dönemdersler/EMBEDDED SYSTEM/ödev1/vhdl/BRAM0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'BRAM0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/bedri/Desktop/7.dönemdersler/EMBEDDED SYSTEM/ödev1/vhdl/kcpsm6.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'kcpsm6'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/bedri/Desktop/7.dönemdersler/EMBEDDED SYSTEM/ödev1/vhdl/top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/bedri/Desktop/7.dönemdersler/EMBEDDED SYSTEM/ödev1/vhdl/sim_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sim_top'

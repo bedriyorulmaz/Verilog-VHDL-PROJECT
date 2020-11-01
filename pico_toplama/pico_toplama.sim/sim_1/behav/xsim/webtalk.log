@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Oct 28 14:29:44 2020
+# Process ID: 29200
+# Current directory: C:/Users/bedri/Desktop/7.dnemdersler/EMBEDDED SYSTEM/dev1/vhdl/pico_toplama/pico_toplama.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/bedri/Desktop/7.dnemdersler/EMBEDDED SYSTEM/dev1/vhdl/pico_toplama/pico_toplama.sim/sim_1/behav/xsim/xsim.dir/sim_top_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/bedri/Desktop/7.dnemdersler/EMBEDDED SYSTEM/dev1/vhdl/pico_toplama/pico_toplama.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/bedri/Desktop/7.dnemdersler/EMBEDDED SYSTEM/dev1/vhdl/pico_toplama/pico_toplama.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/bedri/Desktop/7.dnemdersler/EMBEDDED -notrace
+couldn't read file "C:/Users/bedri/Desktop/7.dnemdersler/EMBEDDED": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Wed Oct 28 14:29:44 2020...
