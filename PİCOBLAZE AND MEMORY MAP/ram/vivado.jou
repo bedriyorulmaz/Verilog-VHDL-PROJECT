@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Jan  1 19:27:58 2021
+# Process ID: 23064
+# Current directory: D:/7.dönem dersler/EMBEDDED SYSTEM/HW2/ram_SON/ram
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24372 D:\7.dönem dersler\EMBEDDED SYSTEM\HW2\ram_SON\ram\ram.xpr
+# Log file: D:/7.dönem dersler/EMBEDDED SYSTEM/HW2/ram_SON/ram/vivado.log
+# Journal file: D:/7.dönem dersler/EMBEDDED SYSTEM/HW2/ram_SON/ram\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/7.dönem dersler/EMBEDDED SYSTEM/HW2/ram_SON/ram/ram.xpr}
