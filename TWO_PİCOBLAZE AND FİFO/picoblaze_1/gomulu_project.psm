@@ -1,0 +1,62 @@
+		#ifDef proc::xPblze6
+	
+			#set proc::xPblze6::scrpdSize,				64						; [64, 128, 256]
+			#set proc::xPblze6::clkFreq,				100000000					; in Hz
+			
+			#set ioDev::BRAM0::en,							true					; [ true | false ]
+			#set ioDev::BRAM0::type,						mem						; [ mem | fifo | reg ]
+			#set ioDev::BRAM0::size,						4096					; Multiple of 2
+			
+			#set instmem::pageSize,							4096	
+			#set instmem::pageCount,						1
+			#set instmem::sharedMemLocation,				loMem					; [ hiMem, loMem ]
+			
+			#set ioDev::BRAM0::value,						instMem
+	
+			#set ioDev::BRAM0::vhdlEn,						true					; Enable/disable vhdl output
+			#set ioDev::BRAM0::vhdlEntityName,				"BRAM0"				; VHDL entity name
+			#set ioDev::BRAM0::vhdlTmplFile,				"ROM_form.vhd"	        ; VHDL template file
+			#set ioDev::BRAM0::vhdlTargetFile,				"BRAM0.vhd"			; VHDL target file
+						
+		#endIf				
+		#ORG ADDR, 0
+		LOAD s0, 1
+		LOAD s1, 0
+		
+		LOAD s2, 0
+		CALL data
+
+control:
+		RDPRT s4, 0x00
+		NOP
+		RDPRT s4, 0x00
+		COMP s4, 0
+		JUMP C, write
+		COMP s4, 15
+		JUMP Z, wait
+
+write:	RDMEM s1, (s2)
+		NOP
+		WRPRT s1, 0x00
+		ADD s2, 1
+		COMP s2, 20
+		CALL Z, reset
+		JUMP control
+
+wait:	RDPRT s4, 0x00
+		NOP
+		RDPRT s4, 0x00
+		COMP s4, 0
+		JUMP Z, write
+		JUMP wait			
+				
+reset:	LOAD s2, 0
+		RET
+
+data: 	WRMEM s0, (s1)
+		COMP s0, 20
+		RET Z,
+		ADD s0, 1
+		ADD s1, 1
+		JUMP data
+				

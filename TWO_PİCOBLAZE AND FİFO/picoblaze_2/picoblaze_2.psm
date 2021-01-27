@@ -1,0 +1,44 @@
+		#ifDef proc::xPblze6
+	
+			#set proc::xPblze6::scrpdSize,				64						; [64, 128, 256]
+			#set proc::xPblze6::clkFreq,				100000000					; in Hz
+			#set proc::xPblze6::intvector,				1023	
+			
+			#set ioDev::BRAM1::en,							true					; [ true | false ]
+			#set ioDev::BRAM1::type,						mem						; [ mem | fifo | reg ]
+			#set ioDev::BRAM1::size,						4096					; Multiple of 2
+											
+			
+			#set instmem::pageSize,							4096	
+			#set instmem::pageCount,						1
+			#set instmem::sharedMemLocation,				loMem					; [ hiMem, loMem ]
+			
+			#set ioDev::BRAM1::value,						instMem
+	
+			#set ioDev::BRAM1::vhdlEn,						true					; Enable/disable vhdl output
+			#set ioDev::BRAM1::vhdlEntityName,				"BRAM1"				; VHDL entity name
+			#set ioDev::BRAM1::vhdlTmplFile,				"ROM_form.vhd"	        ; VHDL template file
+			#set ioDev::BRAM1::vhdlTargetFile,				"BRAM1.vhd"			; VHDL target file
+		
+		#endIf
+		
+		#ORG ADDR, 0
+		LOAD s5, 0
+		INT ENABLE
+		
+wait:	LOAD s0, 15
+		INT ENABLE
+		JUMP wait
+
+ISR:	NOP
+		NOP
+		NOP		
+		RDPRT s4, 0x00		
+		SUB s0, 1
+		COMP s0, 0
+		JUMP Z, wait
+		JUMP ISR				
+		
+		#ORG ADDR, 0x3FF
+		JUMP ISR
+	

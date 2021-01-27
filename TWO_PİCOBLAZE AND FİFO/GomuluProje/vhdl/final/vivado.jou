@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jan 27 18:46:06 2021
+# Process ID: 13460
+# Current directory: D:/7.dönem dersler/EMBEDDED SYSTEM/project/finalproje/GomuluProje/vhdl/final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1256 D:\7.dönem dersler\EMBEDDED SYSTEM\project\finalproje\GomuluProje\vhdl\final\final.xpr
+# Log file: D:/7.dönem dersler/EMBEDDED SYSTEM/project/finalproje/GomuluProje/vhdl/final/vivado.log
+# Journal file: D:/7.dönem dersler/EMBEDDED SYSTEM/project/finalproje/GomuluProje/vhdl/final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/7.dönem dersler/EMBEDDED SYSTEM/project/finalproje/GomuluProje/vhdl/final/final.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config {D:/7.dönem dersler/EMBEDDED SYSTEM/project/finalproje/GomuluProje/vhdl/final/sim_top_behav.wcfg}
+source sim_top.tcl
+restart
+run 10 us
+run 10 us
+close_sim
